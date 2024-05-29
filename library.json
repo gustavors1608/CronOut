@@ -1,0 +1,26 @@
+{
+    "name": "CronOut",
+    "version": "1.1.0",
+    "description": "Uma biblioteca para o Arduino que gerencia um timeout por instância da lib. Cada timeout pode ser iniciado, reiniciado, cancelado e verificado se já foi atingido. O tempo será em milissegundos e, ao atingir o timeout, será executada uma função de callback que não recebe parâmetros, além de alterar uma variável interna.",
+    "keywords": "timeout, timer, cronout, cronjob, cron",
+    "repository":
+    {
+      "type": "git",
+      "url": "https://github.com/gustavors1608/CronOut.git"
+    },
+    "authors":
+    [
+      {
+        "name": "Gustavo Stroschon",
+        "email": "gustavorstroschon@gmail.com",
+        "url": "https://github.com/gustavors1608/",
+        "maintainer": true
+      }
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/gustavors1608/CronOut",
+    "dependencies": {
+    },
+    "frameworks": "Arduino",
+    "platforms": "*"
+  }
