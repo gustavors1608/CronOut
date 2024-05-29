@@ -16,6 +16,7 @@ class CronOut {
     unsigned long _duration;
     unsigned long _startTime;
     bool _active;
+    bool _hasCallback;
     void (*_callback)();
     void _checkTimeout();
 };
