@@ -1,8 +1,15 @@
 #include "CronOut.h"
+typedef void (*CallbackFunction)();
 
-CronOut::CronOut(unsigned long duration, void (*callback)()) {
+CronOut::CronOut(unsigned long duration, CallbackFunction callback = nullptr) {
+    if (callback != nullptr) {
+        _callback = callback;
+        _hasCallback = true;
+    } else {
+        _callback = nullptr;
+        _hasCallback = true;
+    }
     _duration = duration;
-    _callback = callback;
     _active = false;
 }
 
@@ -31,6 +38,8 @@ bool CronOut::isActive() {
 void CronOut::_checkTimeout() {
     if (_active && (millis() - _startTime >= _duration)) {
         _active = false;
-        _callback();
+        if(_hasCallback == true){
+            _callback();
+        }
     }
 }
