@@ -63,6 +63,8 @@ void loop() {
         Serial.println("Exaustor desligado após 30 minutos sem baixar a temperatura!");
         digitalWrite(RELAYPIN, LOW); // Desliga o exaustor
         fan_active = false;
+
+        // aqui poderia ser implementado uma lógica de ligar um ar condicionado ja que o exaustor nao resolveu etc
     }
 
     delay(2000); // Espera 2 segundos antes da próxima leitura
